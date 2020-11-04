@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSP</title>
+   <!--   자바스크립트사용할수있는페이지로만들기-->
+<script type='text/javascript'>
+      /*  var num=22;  //전역변수 어디서든사용가능한변수라부름
+        let age=25; //지역변수 자신이만들어진곳에서만사용가능 
+        alert(age);
+        num=222;
+        
+        age=233;
+        alert(age);*/
+       /* var num=10;
+           num='a';
+           num=3.14;
+            출력
+           document.write("자바스크립트");
+                팝업띄워줌
+             alert("script");
+            입력팝업
+             name =prompt();
+           document.write(name);*/
+           
+        /*   var kor =parseInt(prompt("국어점수 : "));
+           var mat= parseInt(prompt("수학점수: "));
+           var eng= parseInt(prompt("영어점수: "));
+           var total=kor+mat+eng;
+           var avg=total/3;
+           
+           if(avg>=90){ 
+        	   var rat="수";
+           } else if(avg>=80) {
+        	   rat="우";
+           } else if(avg>=70){
+        	   rat="미";
+           } else if(avg>=60){
+        	   rat="양";
+           }else{
+        	   rat="가";
+           }
+           var tab="<table> <tr> <th>총점</th><th>평균</th><th>등급</th></tr> <tr><td>"+total+"</td><td>"+avg+"</td>  <td>"+rat+"</td></tr></table>"
+           document.write(tab);*/
+         //  alert(typeof(avg));
+         //  alert(typeof("홍길동"));
+         // alert(confirm("계속하시겠습니까?"));
+          
+         // var num= prompt("숫자 입력 :");
+          //num=Number(num);
+         // num=parseInt(num);
+          //alert(num);
+          //alert(typeof(num));
+          
+           //아무런값이 없을때 false를 나타내줌 Boolean
+          //alert(Boolean(num));        		  
+          //alert(''==false);
+          //alert(''==0);
+           //== 두개를 사용할떈 데이터만 비교를해줌 ===세개를 놓는다면 데이터,데이터타입도 비교를해줌
+          //alert(''===0);
+        // if(num==1){
+        	// alert("정수1입력함");
+        	            // body태그안에 <H2>ddd</h2> 를넣어주라는 형식이됨
+        	            //자바스크립트로 html을구현
+        	          /*  var num= 10;
+        	            var num1=30;
+        	            var make ="<table border='1'> <tr> <td>"+num1+" </td> <td>"+num+"</td></tr> </table>";
+        	document.write(make);*/
+        	
+        	var row =parseInt(prompt());
+        	var col=parseInt(prompt());
+        	
+        	var table="<table border=1>";
+      for(let i=1; 1<=row; i++){
+    	   table+="<tr>";
+    	  for(let k=1;k<=col;k++){
+    		  table += "<td>"+Math.floor(Math.random()*25)+"</td>";
+    	  } 
+    	  table +="</tr>";
+      }
+        	document.write(table);
+      
+      
+     </script>
+</head>
+<body>
+ 
+ </body>
+</html>

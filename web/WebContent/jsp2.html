@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript'>
+ /*
+ var i=1;
+ while(i<=5){
+	 document.write(i);
+	 i++;
+ }
+ for(var k=i; k<=10; k++)
+   document.write(k);
+ 
+ var j=i;
+ do{
+	 document.write(j);
+	 j++;           기본 while문 for문 do while문 
+ }while(j<=6);*/
+  
+ /*var arr =[10,20,30,40,50]; //자바스크립트에서 배열생성하는법
+ for(var i in arr){
+	 document.write(arr[i]+',');
+ }
+  
+      
+ for(const j of arr){ //const : 상수화       final int j 와같다 
+	 document.write(j);
+ }*/
+ 
+ var score=[76,87,98,65,74,91,82,79,67,99];
+ var names=["이순신" , "김춘추","김유신","홍길동","최무선","강감찬","문익점","성상문","송시열","박팽년"];
+ //score 배열의성적과 name 배열을 2행 10열의 테이블로 출력:
+	 var table="<table border='a'>";
+	 
+	 table+="<tr>";
+	  for(const k of names){
+		  table+="<td>";
+		  table+=k;
+		  table+="</td>";
+	  } table+="</tr>";
+	   var total=0, avg;
+	  table+="<tr>";
+      for(var i in score){
+    	  table+="<td>";
+    	  table+=score[i];
+    	  table+="</td>";
+    	  total += score[i];
+      }table+="</tr>";
+      
+      avg=total/10;
+      table+="<tr> <td colspan='3'>총점</td> <td colspan='2'>"+total+"</td>";
+      table+="<td colspan='3'>평균</td><td colspan='2'>"+avg+"</td></tr>";
+      
+	 table+="</table>";
+	 document.write(table);
+</script>
+</head>
+<body>
+
+</body>
+</html>

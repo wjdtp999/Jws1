@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var member=[];
+
+ function input(){
+	     var name = document.getElementById("name"); //IDname으로 되어있는 태그의 값을 가져오라는 getElemnetById body의 input name를가져옴 
+	     var birth= document.getElementById("birth");  
+	     if(name.value==""){
+        	alert("이름을입력해주세요");
+        	name.focus();
+        	return;
+        }else if(birth.value==0){
+        	alert("생년월일을입력해주세요")
+            birth.focus();
+        	return;
+        }
+	    var data={
+	    	이름 :name.value,
+	    	생년월일:birth.value,
+	        toString:function(){
+	        	return "이름 :"+this.이름+"  생년월일 : "+this.생년월일+"<br>";
+	        }
+	    };
+	    member.push(data);
+      
+	    var out=document.getElementById('out');
+	    var view='';
+	   for(var i in member){
+		   view += member[i].toString();
+	   }
+	       // div id 인 out변수만들고 view 라는변수에 toString 입력한값을 저장해서
+	       // out innerHTML div안에 넣어주기
+	   out.innerHTML=view;
+	       
+	       
+	       name.value="";
+	       birth.value="";
+	       name.focus();
+ }        
+</script>
+<style>
+ input{
+ width:100px;
+ }
+</style>
+</head>
+
+<body>
+
+이름<input type='text' id='name'><br>
+생년월일<input type='text' id='birth' onkeydown='javascript:if(event.keyCode==13){input(); }'> <br>  <!-- onkeydown은 키보드를눌렀을때 일어나는것 자바스크립트직접넣어 if문으로 keycode 13번 엔터로 넘어갈수잇도록만듬 -->
+<button type='button' onClick='input()'>입력</button>
+<fieldset>
+   <legend>회원리스트</legend>
+<div id='out'> </div>
+</fieldset>
+</body>
+</html>

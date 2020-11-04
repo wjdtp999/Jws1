@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+       
+       function member(name,age,job){  //생성자함수
+        	 this.name=name;
+        	 this.age=age;
+        	 this.job=job;
+        }
+              //prototype은 객체내부의 name age등등 을 추가하거나 삭제하는 기능을함
+        member.prototype.view=function(){ //생성자함수안에서 이함수가 만들어지면 객체가생성될때마다 똑같이 생성이되서 메모리주소를 차지 하지만 이런식으로 만든다면 클래스변수처럼 공유자원이됨
+       	 return this.name+":"+this.age+":"+this.job+"<br>";
+        }
+        철수 =new member("김철수",28,"변호사"); //생성자함수 통해 객체 만드는법
+     영희=new member("이영희",30,"교사");
+        민수=new member("배민수",29,"농구선수");
+     
+        //배열에저장
+        var list=[철수,영희,민수];
+        
+        
+        for(var i in list){
+        //	document.write(list[i].view());
+        }
+
+        //date
+          var today =new Date();
+         var week=["일요일","월요일","화요일","수요일","목요일","금요일","토요일"]; 
+        var n = today.getDay();
+      //  alert(week[n]);
+        
+        var time=today.getFullYear()+"년<br>";
+        time +=(today.getMonth()+1)+"월<br>";
+        time +=today.getDate()+"일<br>";
+        time +=today.getHours()+"시";
+        time +=today.getMinutes()+"분";
+        time +=today.getSeconds()+"초";
+       // document.write(time);
+           
+        today.setDate(today.getDate()+99);
+</script>
+<style type="text/css">
+ #day{
+    margin:0 auto;
+    position:relative;
+    width:200px;
+    border:1px solid black;
+ } 
+ #top{ height:100px; text-align:center;}
+ #top p{
+ font-size:20pt; font-weight:700;
+ }
+ #my-day{ }
+ .bar{ 
+ background-color:black; 
+ color:white; 
+ font-weight:700;
+ padding-top:5px;
+ height:25px;
+ text-align:center;
+  }
+#cont ul {
+list-style-type:none;
+width:180px;
+padding:0;
+margin-left:10px;
+padding-bottom:5px;
+border-bottom:1px solid gray;
+} 
+.title{ 
+height:30px;
+float:left;
+width:80px;
+}
+.d-date{
+height:50px;
+text-align:right;
+width:180px;
+}
+.bar:hover {
+ background-color:pink;
+ cousor:pointer;
+}
+
+</style>
+</head>
+<body>
+  <div id='day'> 
+    <div id='top'>
+       <h3 id='my-day'>  </h3>
+       <p id='count'>   </p>
+   </div>
+      <div class='bar' onClick='calc()'>D-day 계산</div>
+   <div id='cont'> 
+    <ul>
+        <li class='title'>100일</li>
+        <li class='d-date' id='d100'> </li>
+    </ul>
+    <ul>
+       <li class='title'>200일</li>
+        <li class='d-date' id='d200'> </li>
+    </ul>
+    <ul>
+       <li class='title'>1년</li>
+        <li class='d-date' id='d1'> </li>
+    </ul>
+    <ul>
+        <li class='title'>500일</li>
+        <li class='d-date' id='d500'> </li>
+    </ul>
+    </div>
+  </div>
+</body>
+</html>
+  <script>
+       var my_date=prompt("기념 일 입력(ex:2020-02-05):");
+       var today1=new Date();
+              
+       var now=today1.getTime(); //  밀리초단위로변경
+       var my=new Date(my_date).getTime(); // 내가정한 날도 밀리초단위로변경 날짜를 비교할땐 초단위로 환산해서 해야 차이가없음
+       var 차이=now-my;
+       var 디데이=Math.round(차이/1000/60/60/24)+1;
+    
+       document.getElementById('my-day').innerHTML=my_date+"로부터..";
+       document.getElementById("count").innerHTML=디데이+"일째"; 
+       function calc(){
+    	      var temp=my+(99*1000*60*60*24);
+    	      var mydate=new Date(temp);
+    		  var d100=mydate.getFullYear()+"년"+(mydate.getMonth()+1)+"월"+mydate.getDate()+"일";
+    		  
+    		  temp=my+(199*1000*60*60*24);
+    		  mydate =new Date(temp);
+    		  var d200=mydate.getFullYear()+"년"+(mydate.getMonth()+1)+"월"+mydate.getDate()+"일";
+    		  
+    		  temp=my+(364*1000*60*60*24);
+    		  mydate=new Date(temp);
+    	      var d365=mydate.getFullYear()+"년"+(mydate.getMonth()+1)+"월"+mydate.getDate()+"일";
+    	      
+    	      temp=my+(499*1000*60*60*24);
+    	      mydate=new Date(temp);
+    	      var d500=mydate.getFullYear()+"년"+(mydate.getMonth()+1)+"월"+mydate.getDate()+"일";
+    	      
+    	      document.getElementById("d100").innerHTML=d100;
+    	      document.getElementById("d200").innerHTML=d200;
+    	      document.getElementById("d1").innerHTML=d365;
+    	      document.getElementById("d500").innerHTML=d500;
+       }
+       
+</script>

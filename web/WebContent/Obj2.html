@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript'>
+ function make_table(){
+     var r=parseInt(prompt("행 :"));
+      var c=parseInt(prompt("열 :"));
+      var w=parseInt(prompt("높이 :"));
+	var h=parseInt(prompt("너비:"));
+	var cl=prompt("색상 :");
+	 test(r,c,w,h,cl);
+ }
+ var table= {
+		 row : r,
+		 col : c,
+		 width: w,
+		 height: h,
+		 color:cl ,
+		 make :function(){ // 자바의 class a{int num; string name; void aaa(){ num =20; }}과같음 a b =new a(); b.num=20; 처럼 객체를생성하지않아도 데이터를 저장해줄수있음 
+			 var t="<table border=1>";
+			 for(var i=1; i<=this.row;i++){
+				  t+="<tr height="+this.height+">";
+				 for(var k=1; k<=this.col ;k++){
+					 t+="<td width="+this.widtd+"bgcolor="+this.color+">"; "</td>"; 
+				 }
+				 t+="</tr>";
+			 }
+			 t+="</table>";
+			 document.getElementById('tb').innerHTML=t;  //div 태그안에 위 table을 넣어줌
+		 }
+ };
+ 
+ 
+ alert('row'in table); //row가 있는지 찾아줌 in키워드 
+ with(table){ //with 라는 키워드에 객체이름을넣어주고 객체의 key를 바로가져와서 간단사용이가능하게만듬
+	 alert(color);
+ }
+ ////
+ 
+ var member = { };
+
+member.name ="김유신";
+member.age=25;
+
+alert(member.name);
+member.view=function(){
+	alert("객체 메소드");
+	alert(this.name); 
+};
+member.view();
+
+// 데이터를 지워줌
+delete(member.age);
+alert(member.age); //결과 un타입
+
+/*var movie = {
+		'제목' : "스파이더맨"
+};
+alert(movie['제목']);
+
+movie.['제목']="스파이더맨";
+
+alert(movie['제목']);
+*/
+ </script>
+</head>
+<body>
+<input type='button' value="테이블만들기" onClick='make_table()'> <br>
+<div id='tb'>  </div>
+</body>
+</html>

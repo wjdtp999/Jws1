@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+ 
+ var arr=[1,2,3,4,5];
+ 
+ var a={};
+ 
+ var b=new Array();
+
+ var c= new Array(10,20,30,40,50);
+ 
+   //배열 합치기 concat
+ var temp=c.concat(arr);
+          //ㅓjoin은 배열요소들을 연걸하는함수 구분기호를 지정할수있다 - , . 등
+  temp=c.join("-");
+          
+          
+          c.push(100); //배열에 데이터 넣기
+    c.pop(); // 배열에 데이터 뺴오기
+    
+    c.splice(3); //3번인덱스부터 마지막까지 삭제
+    c.splice(1,0,70,80,90,100); //splice는 추가 삭제 기능을할수있음 1번인덱스부터 0개삭제하고 2번인덱스부터 이데이터를저장하라 
+    alert(c);
+    
+    alert(c.slice(2));//원하는 위치의 데이터를 추출해줌 slice
+</script>
+</head>
+<body>
+
+</body>
+</html>

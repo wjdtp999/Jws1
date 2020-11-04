@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript'>
+  function test(){
+	  var a='클로저'; //지역변수 괄호바깥에서 사용x
+       
+	  return alert(a);
+  }
+  //test();
+  
+  //setTimeout(함수,시간);  지정된시간이지나고 함수가실행
+  //setTimeout(function tes(){alert("5초");},5000);
+ 
+  
+  // var a=1;  초마다 a를 출력해줌
+ /* var t=setInterval(function(){
+	  document.write(a +" ");
+	  a++;
+  },1000);*/
+  
+ // setTimeout(function(){
+  //clearInterval(t);} ,10000);
+  
+  
+  
+  //document.write(new Date()); 
+  /*var t=setInterval(function(){
+      location.reload(); 새로고침을해줌
+   },1000);*/
+   
+   escape("나는홍길동입니다"); //인코딩 
+   unescape("%uB098%uB294%uD64D%uAE38%uB3D9%uC785%uB2C8%uB2E4");// 디코딩
+   alert(unescape("eY%3F72723547153%3F57%3F"));
+   encodeURI("나는홍길동입니다"); 
+   decodeURI();
+   
+   encodeURIComponent();
+   decodeURIComponent();
+   
+   
+   var n=10;
+   isFinite(n); // 정수로 사용할수있는값이면 트루
+   isNaN(n); // 정수가 아니여야 트루
+   
+   //    
+   var str="123a"; // a123은 parseint도 변환이안됨 
+   var a= parseInt(str);
+   var b=Number(str); 
+  //alert(a); 결과 123
+  //alert(b); 결과 NaN 
+  
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript'>
+var list=["1.jpg",'2.jpg','3.jpg','4.jpg'];
+var img='';
+var now=0;
+
+window.onload=function(){
+    img = document.querySelector("#img>img");
+    img.setAttribute("src",list[now]); //setAttribute<속성이름,속성값
+    img.setAttribute("width","200");
+}
+
+
+
+
+var small =document.querySelectorAll('.m');
+
+for(var i in small){
+small[i].addEventListener("mouseover",view);//addEventListener(이벤트, 함수)
+}
+function view(){
+	var pic=this.src;
+	img.setAttribute('src',pic);
+}
+</script>
+</head>
+<body>
+<div>
+      <img class='m' src='1.jpg' width=50 height=50>
+      <img class='m' src='2.jpg' width=50 height=50>
+      <img class='m' src='3.jpg' width=50 height=50>
+      <img class='m' src='4.jpg' width=50 height=50>
+</div>
+</body>
+</html>

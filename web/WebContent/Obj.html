@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript'>
+
+/* var member= {  //key : value 객체생성
+		 name : "홍길동",
+		 age : 24,
+		 addr : "대전 서구 둔산동",
+		 view : function() { 
+			 alert("객체의 메소드");
+		 }
+ };
+ member.view();
+ alert(member.name);
+member.name="김유신";
+alert(member.name);
+ /*
+ var student ={
+		 '이름 ': "최무선",
+		 '번호':2020122,
+		 '학년':3,
+		 '반':4
+ };
+ alert(student['이름']);
+ */
+ function make_table(){
+     var r=parseInt(prompt("행 :"));
+      var c=parseInt(prompt("열 :"));
+      var w=parseInt(prompt("높이 :"));
+	var h=parseInt(prompt("너비:"));
+	var cl=prompt("색상 :");
+	 test(r,c,w,h,cl);
+ }
+ function test(r,c,w,h,cl){
+ var table= {
+		 row : r,
+		 col : c,
+		 width: w, 
+		 height: h,
+		 color:cl,
+		 make :function(){ // 자바의 class a{int num; string name; void aaa(){ num =20; }}과같음 a b =new a(); b.num=20; 처럼 객체를생성하지않아도 데이터를 저장해줄수있음 
+			 var t="<table border=1>";
+			 for(var i=1; i<=this.row;i++){
+				  t+="<tr height="+this.height+">";
+				 for(var k=1; k<=this.col ;k++){
+					 t+="<td width="+this.widtd+"bgcolor="+"'"+this.color+"'"+">"; "</td>"; 
+				 }
+				 t+="</tr>";
+			 }
+			 t+="</table>";
+			 document.getElementById('tb').innerHTML=t;  //div 태그안에 위 table을 넣어줌
+		 }
+ };
+     table.make();
+ }
+ </script>
+</head>
+<body>
+<input type='button' value="테이블만들기" onClick='make_table()'>
+
+<div id='tb'>  </div>
+</body>
+</html>

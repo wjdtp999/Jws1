@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<link rel='stylesheet' type='text/css' href='http://localhost:8080/web2/Login.css'>
+<script type='text/javascript' src='http://localhost:8080/web2/Login.js'></script>
+</head>
+<body>
+<div id='join_main'>
+	<form name='join_f' method='get' action='join_save.html'>
+		<fieldset id='ess'>
+			<legend>필수입력</legend>
+			<div>
+				<span class='title'>아이디</span>
+				<span><input type='text' id='id' name='id'></span>
+			</div>
+			<div>
+				<span class='title'>비밀번호</span>
+				<span><input type='password' id='pw' name='pw'></span>
+			</div>
+			<div>
+				<span class='title'>비밀번호확인</span>
+				<span><input type='password' id='pwre' name='pwre'></span>
+			</div>
+			<div>
+				<span class='title'>이름</span>
+				<span><input type='text' id='name' name='name'></span>
+			</div>
+			<div>
+				<span class='title'>연락처</span>
+				<span><input type='text' id='phone' name='phone' placeholder='-없이 입력하세요'></span>
+			</div>
+			<div>
+				<span class='title'>이메일</span>
+				<span><input type='text' id='email' name='email'></span>
+				@
+				<span><select id='domain' name='domain'></select></span>
+			</div>
+			<div>
+				<span class='title'>주소</span>
+				<span><input type='text' id='addr' name='addr'></span>
+			</div>
+		</fieldset>
+		<fieldset id='select'>
+			<legend>선택입력</legend>
+			<div>관심항목</div>
+			<div>
+				<ul id='int_list'>
+					<li>
+			<input type="checkbox" value='tech' name='interest' class='interest'>
+					테크</li>
+					<li>
+			<input type="checkbox" value='toon' name='interest' class='interest'>
+					웹툰</li>
+					<li>
+			<input type="checkbox" value='movie' name='interest' class='interest'>
+					영화</li>
+					<li>
+			<input type="checkbox" value='animal' name='interest' class='interest'>
+					동물공감</li>
+					<li>
+			<input type="checkbox" value='spots' name='interest' class='interest'>
+					스포츠</li>
+					<li>
+			<input type="checkbox" value='car' name='interest' class='interest'>
+					자동차</li>
+					<li>
+			<input type="checkbox" value='travel' name='interest' class='interest'>
+					여행</li>
+					<li>
+			<input type="checkbox" value='butty' name='interest' class='interest'>
+					패션뷰티</li>
+				</ul>
+			</div>
+			<div>연동 SNS</div>
+			<div>
+				<ul id='sns_list'>
+					<li>
+					<input type="radio" value='kakao' name='sns' class='sns'>
+					카카오
+					</li>
+					<li>
+					<input type="radio" value='facebook' name='sns' class='sns'>
+					페이스북
+					</li>
+					<li>
+					<input type="radio" value='star' name='sns' class='sns'>
+					인스타그램
+					</li>
+					<li>
+					<input type="radio" value='twitter' name='sns' class='sns'>
+					트위터
+					</li>
+				</ul>
+			</div>
+		</fieldset>
+		<div>
+			<span id='cl'><button type='button' >취소</button></span>
+			<span id='jn'><button type='button' >가입</button></span>
+		</div>
+	</form>
+</div>
+</body>
+</html>

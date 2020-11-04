@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//익명 함수 
+	 var f=function(입력형태){ 
+            var view="익명함수";
+            document.write(view);
+	 }; f();
+	 /* 자바 > 출력타입 메소드이름(입력형태){ }
+	       메소드이름 (입력값);
+	       자바스크립트 >  function(입력형태){ }
+	                변수이름 (입력값);*/
+	                
+	                
+ 	   //선언적 함수
+ 	   function sum(a,b){
+	         document.write(a+b);
+	         }
+    sum(10,20);
+    
+    function test(){
+        var length= arguments.length;
+        if(length==0){
+        	alert("입력값이 없습니다.");
+        }else {
+        	var tot=0;
+        	for(const i of arguments)
+        		tot +=i;
+        	alert("총합 : "+tot);
+        }
+    }
+
+    //내부함수
+    function b(){ //다른파일에서생성된함수
+    	
+    }
+    function a(){
+    	 function b(){ //현재파일
+    	    	
+    	    }
+             // 현재파일 b함수사용
+    } 
+    function c(){
+            //  다른파일 b함수
+    }
+
+    //콜백함수 
+    function a(bc){
+    	var i=1;
+    	if(i<1)
+    	bc();//익명함수 b가담김 
+    	else
+    		alert("1보다 크다 정상실행 ");
+    }
+    var b=function(i){
+    	alert("콜백");
+        alert("1보다 작음 아래내용실행");
+        //내용
+        //내용
+    }
+    a(b);
+    
+    
+    var tot_member=5;
+    function a(bc){
+    	if(tot_member>10){
+    	bc();
+    	return;
+    }
+    alert("10명미만 탑승가능");
+    }
+    
+    var b=function(i){
+    	alert("정원초과로 탑승불가");
+    	alert("차량출발함수실행");
+    }
+    </script>
+    
+</head>
+<body>
+<input type="button" value="함수실행1" onClick='test(10,20,30)'> <br>
+<input type="button" value="함수실행2" onClick='test(1,2,3,4,5,6)'> <br>
+<input type="button" value="함수실행3" onClick='test()'>
+</body>
+</html>

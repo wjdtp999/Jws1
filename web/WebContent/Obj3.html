@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Obj3</title>
+<script type='text/javascript'>
+
+ /* var movie=[]; //movie 배열 생성 
+                    
+  function make(title,year,genre){ //함수생성 매개변수 생성
+             var data={
+		  제목 :title,
+		 개봉년도 :year,
+		 장르 :genre,
+		toString : function() {
+			 return "제목: " +this.title+"장르 : "+this.genre;
+		}
+  };
+  movie.push(data);
+  }
+  
+  
+  
+  
+  make("반도",2020,"공포");
+  make("다만악에서..",2020,"액션");
+  make("오케이마담",2020,"코미디");
+  make('할로윈',2018,'공포');
+  make('어벤저스',2019,'SF');
+  /*
+  movie.push( {제목 : '반도', 개봉년도 :2020, 장르:'공포' } ); //movie 배열안에 객체5개를 저장
+  movie.push( {제목 :'다만 악에서..', 개봉년도 :2020, 장르:'액션' });
+  movie.push( {제목 :'오케이마담' , 개봉년도:2020, 장르 :'코미디'} );
+  movie.push( {제목:'할로윈',개봉년도:2018,장르:'공포'});
+  movie.push( {제목:'어벤져스',개봉년도:2019,장르:'SF'});*/
+  /*
+  for(var i in movie){ 
+    if(movie[i].개봉년도==2020){
+    	alert(movie[i].제목+" "+movie[i].장르);
+    }
+  }
+  */
+  
+  
+ /* var member=[];
+  function data_input(name,age,job,gen){  배열 에 객체데이터를 prompt로 전송받아 for문 if문으로 다시출력하고싶은데이터만 출력하는법
+	     name=prompt("이름 :");
+	     age=parseInt(prompt("나이:"));
+	     job=prompt("직업 :");
+	     gen=prompt("성별 :")
+	  var data={
+			  이름:name,
+			  나이:age,
+			  직업:job,
+			 성별:gen,
+			 view :function(){
+				return "이름 - "+this.이름 +"나이 - "+this.나이+"직업 -"+this.직업+"성별 -"+this.성별+"<br>"; 
+			 }
+	     };
+	  member.push(data);
+  };
+  
+  
+  
+  function data_output(){
+	for(var i in member){
+		if(member[i].나이>=30){
+           document.write(member[i].view()); 
+		}
+	}  
+  };*/
+ 
+  
+ /* function test(data){ //함수안에서 객체생성 데이터적용옵션
+	  data.name=data.n || "아무개"; // || 논리연산자로 임의의값으로 초기화 data.n에 값이 들어간다면 data.name에 저장되고 n에값이없으면 아무개가저장
+	  data.age=data.a || 0;
+     
+	  document.write(data.name+" ,"+data.age);
+  }
+     
+  test( {n:"김유신"});
+   */  
+   
+   
+   //////////////////////////////////////
+ /* var num=100;
+  var temp1=num;// 100저장 , 깊은복사라고칭함 깊은복사는 데이터만복사
+  num=10;  
+  document.write(temp1);//100출력 
+  
+  //배열복사
+  var arr=[10,20,30];
+  var temp2= [arr];   //[...arr] 얕은복사로변환 결과 20출력
+   arr[1]=500;     //temp2도 똑같이 500으로 변환 ,얕은복사   얕은복사는 메모리주소를 복사
+  document.write(temp2[1]);  // 500출력
+   
+   //객체복사 
+   var a= {q:10 , w: 20};
+   var b=a; //얕은복사
+   a.q=100; 
+   document.write(b.q); //결과 100
+   
+   function copys(obj){//  (데이터를가져올 객체가 들어갈곳)
+	   var out={};  //데이터를담을곳
+	   for(var i in obj){ 
+		   out[i]=obj[i]; 
+	   }
+	   return out;//데이터를가져가기
+   }
+   var c=copys(a); //객체의 깊은복사
+   a.q=500;
+   document.write(c.q);//결과 100;*/
+   
+   
+   
+   
+   
+  </script>
+</head>
+<body>
+<!--  <input type="button" value="데이터 입력" onClick='data_input()'><br>
+<input type="button" value="데이터 출력" onClick='data_output()'>-->
+
+</body>
+</html>

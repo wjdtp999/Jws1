@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.write_item span{
+	margin-right:10px;
+	width:50px;
+	display:inline-block;   /*  inline, inline-block */
+	text-align:right;
+}
+#name {
+	width:60px;
+}
+#cls, #num{ width:50px;}
+
+#item_name{
+	position:absolute;
+	left:100px;
+	top:50px;
+}
+#item_dept{
+	position:absolute;
+	left:250px;
+	top:50px;
+}
+#item_num{
+	position:absolute;
+	left:100px;
+	top:90px;
+}
+#item_cls{
+	position:absolute;
+	left:250px;
+	top:90px;
+}
+#enter{
+	position:absolute;
+	left:200px;
+	top:120px;
+}
+#list{
+	position:absolute;
+	left:100px;
+	top:150px;
+}

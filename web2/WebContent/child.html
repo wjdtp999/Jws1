@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var child=[];
+var parent=[];
+window.onload=function(){
+	parent.push(opener.document.querySelector("#parent_name"));
+	parent.push(opener.document.querySelector("#parent_age"));
+	parent.push(opener.document.querySelector("#parent_job"));
+	
+	child.push(document.querySelector("#child_name"));
+ child.push(document.querySelector("#child_age"));
+	child.push(document.querySelector("#child_job"));
+	
+	for(var i in child){
+		child[i].value=parent[i].value;
+	}
+}
+function child_close(){
+	for(var i in parent)
+		parent[i].value=child[i].value;
+	window.close();
+	
+}
+
+</script>
+</head>
+<body>
+이름 :<input type='text' id='child_name'> <br>
+나이 :<input type='text' id='child_age'> <br>
+직업 :<input type='text' id='child_job'> <br>
+<button onclick='child_close()'>닫기</button>
+</body>
+</html>

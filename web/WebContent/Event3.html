@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+     window.onload=function(){
+     var view= document.querySelector("#view");
+     var state=false;
+     view.addEventListener("click",function(){
+    	 if(state==false){ 
+    	document.querySelector("#det").style.display='block';
+    	state=true;
+    	view.innerHTML="상세 닫기";
+    	 }else if(state==true){
+    		 document.querySelector("#det").style.display='none';
+    		 state=false;
+    		 view.innerHTML="상세 보기";
+    	 }
+    	  });
+       var add=document.querySelector("#add");
+       add.addEventListener("change",function(){
+    	   var new_li=document.createElement("li");
+    	   var li_text=document.createTextNode(add.value);
+    	   new_li.appendChild(li_text);
+    	   
+    	   var at=document.createAttribute("style");
+    	   at.value=' list-style-type:none; width:200px;';
+    	   new_li.setAttributeNode(at);
+      
+    	   var span=document.createElement("span");
+    	   var span_text=document.createTextNode("X");
+    	   at=document.createAttribute("style");
+    	   at.value='margin-left:50px; cursor:pointer;';
+    	   span.setAttributeNode(at);
+    	   span.appendChild(span_text);
+    	   span.addEventListener("click",function(){
+    		    if(this.parentNode){ // this  > span 을의미{
+    		    	this.parentNode.parentNode.removeChild(this.parentNode);// Span X의 부모인 생성된Li 의부모를찾아 그자식인 생성된Li를 제거 
+    		    }
+    	   });
+    	   new_li.appendChild(span); 
+    	   
+    	   var ul=document.querySelector("#list");
+    	   ul.appendChild(new_li);
+      });
+     }
+       </script>
+<style type="text/css">
+ #det{
+   display:none;
+ }
+
+</style>
+</head>
+<body>
+<div id='des'>
+    <ul id='list'>
+       <li>상품명 : 조립PC </li>
+       <li>판매가 :500,000원</li>
+       <li>배송비 :무료</li>
+       <li>추가구성 선택<br> 
+          <select id='add'>
+              <option value='추가구성1'>추가상품 1</option>
+              <option value='추가구성2'>추가상품 2</option> 
+              <option value='추가구성3'>추가상품 3</option>
+              <option value='추가구성4'>추가상품 4</option>         
+          </select>
+       </li>
+    </ul>
+    <button>장바구니 담기</button> <br>
+    <a href="#" id='view'>상세 보기</a>
+</div>
+ <div id='det'>
+     <h2>상품 상세 정보 </h2>
+      <ul>
+          <li>정보1</li>
+           <li>정보2</li>
+            <li>정보3</li>
+             <li>정보4</li>
+              <li>정보5</li>
+               <li>정보6</li>
+      </ul>
+ </div>
+</body>
+</html>

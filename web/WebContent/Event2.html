@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event</title>
+<script type="text/javascript">
+ window.onload=function(){
+	    var r=document.querySelector("#red");
+	    var b=document.querySelector("#blue");
+	    var g=document.querySelector("#green");
+	    var y=document.querySelector("#yellow");
+	    r.addEventListener("click",function(){
+	    	r.style.backgroundColor='red';
+	    	b.style.backgroundColor='';
+	    	g.style.backgroundColor='';
+	    	y.style.backgroundColor='';
+	    });
+	    b.addEventListener("click",function(){
+	    	b.style.backgroundColor='blue';
+	    	r.style.backgroundColor='';
+	    	g.style.backgroundColor='';
+	    	y.style.backgroundColor='';
+	    });
+	    g.addEventListener("click",function(){
+	    	g.style.backgroundColor='green';
+	    	r.style.backgroundColor='';
+	    	b.style.backgroundColor='';
+	    	y.style.backgroundColor='';
+	    });
+	    y.addEventListener("click",function(){
+	    	y.style.backgroundColor='yellow';
+	    	r.style.backgroundColor='';
+	    	b.style.backgroundColor='';
+	    	g.style.backgroundColor='';
+	    });
+ };
+
+</script>
+</head>
+<style type="text/css">
+   div{
+    border:1px solid black;
+   }
+   #red{
+   height:250px;
+   width:100px;
+    margin-top:250px;
+    margin-left:550px;
+   }
+   #blue{
+   width:250px;
+   height:100px;
+   margin-left:300px;
+   }
+   #green{
+   width:250px;
+   height:100px;
+   margin-left:650px;
+   margin-top:-103px;
+   }
+   #yellow{
+   width:100px;
+   height:250px;
+   margin-left:550px;}
+</style>
+<body>
+<div id='red'  >  </div>
+<div id='blue' >     </div>
+<div id='green' >     </div>
+<div id='yellow' >      </div>
+</body>
+</html>

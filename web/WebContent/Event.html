@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+ window.onload=function(){
+	 var select=document.querySelectorAll(".select");
+	 var p5=document.querySelector("#p50");
+	 var m5=document.querySelector("#m50");
+	 var p2=document.querySelector("#p20");
+	 var m2=document.querySelector("#m20");
+	 
+	 var a=document.querySelector("#a");
+	 var b=document.querySelector("#b");
+	
+	 var color = ['red','yellow','blue'];
+	 for(var i=0; i<select.length;i++){
+		 select[i].addEventListener("click",function(){
+			 a.style.backgroundColor=this.value;
+		      	 a.style.height='50px';
+		 });
+	 }
+	 b.style.width='50px';
+	 b.style.height='20px';
+	 b.style.border='1px solid black';
+	 var wd=50;
+	 var hg=20;
+	 p5.addEventListener('click',function(){
+		 wd +=50;
+		 b.style.width=wd+'px';
+	 });
+	 m5.addEventListener('click',function(){
+		 wd -=50;
+		 b.style.width=wd+'px';
+	 });
+	 p2.addEventListener('click',function(){
+		 hg+=20;
+		 b.style.height=hg+'px';
+	 });
+	 m2.addEventListener('click',function(){
+		 hg-=20;
+		 b.style.height=hg+'px';
+	 });
+ };
+</script>
+<style>
+
+</style>
+</head>
+<body>
+<div id='control'>
+<button class='select' value='red'>빨강</button><button class='select' value='yellow'>노랑</button><button class='select' value='blue'>파랑</button> <br>
+너비<button id='p50'>50+</button> <button id='m50'>50-</button> <br>
+높이<button id='p20'>20+</button> <button id='m20'>20-</button> <br>
+</div>
+
+
+<div id='a'>
+
+</div>
+<div id='b'>
+
+</div>
+</body>
+</html>
