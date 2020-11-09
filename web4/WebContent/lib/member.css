@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+#join_write, #login_write{
+	margin:0 auto;
+	position:relative;
+	width:500px;
+}
+.join_title{
+	display:inline-block;
+	width:80px;
+	padding-right:20px;
+	padding-top:5px;
+	float:left;
+	text-align:right;
+	font-size:17pt;
+}
+.join_input input{
+	height:40px;
+	font-size:17pt;
+}
+.join_list{
+	margin-bottom:10px;
+}
+#join_id,#join_pw, #join_name { width:160px;}
+#join_bt{width:100px; font-size:20pt;}
+
+
+.login_title{
+	display:inline-block;
+	width:120px;
+	font-size:20pt;
+	margin-bottom:10px;
+}
+.login_input input{
+	height:50px;
+	font-size:20pt;
+}
+.login_list{
+	margin-bottom:10px;
+}
+#login_bt{width:100px; font-size:20pt;}
