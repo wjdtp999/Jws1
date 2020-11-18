@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+#menu_list{
+	margin:0;
+	padding:0;
+	width:1000px;
+	position:relative;
+	height:25px;
+	list-style-type:none;
+}
+#menu_list li{
+	width:16.65%;
+	float:left;
+	text-align:center;
+}
+#menu_list li a{
+	color:black;
+	font-weight:700;
+	text-decoration:none;
+}
+#menu_list li:hover {	background-color:gray;}
+#menu_list li:hover a{color:white;}
+#search{
+	padding-top:10px;
+	margin:0 auto;
+	width:230px;
+	position:relative;
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+#share{
+	margin:0 auto;
+	width:1000px;
+	position:relative;
+}
+#top{
+	height:25px;
+	padding-top:5px;
+	border-bottom:1px solid black;
+}
+#top span{
+	display:inline-block;
+	width:80px;
+}
+#top span a{
+	color:black;
+	font-weight:700;
+	text-decoration:none;
+}
+#top span a:hover{
+	background:gray;
+	color:white;
+}
+#menu {height:70px; padding-top:5px;}
+#foot{height:25px; padding-top:5px;}
+#content{
+	height:800px;
+	padding:10 0 0 10;
+}

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.most{
+	height:560px;
+}
+.most .item, .most .labor{
+	display:inline-block;
+	height:560px;
+	width:455px;
+	margin-left:20px;
+	margin-right:20px;
+}
+.most .item ul li, .most .labor ul li{
+	width:440px;
+	height:70px;
+	margin:0;
+	padding:0;
+}
+
+.notice{
+	height:240px;
+}
