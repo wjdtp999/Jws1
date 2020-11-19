@@ -23,9 +23,14 @@ public class fashion_hnd implements ex_able{
 		}else if(part.equals("board_save")) {
 			fashion_service fs = new fashion_service();
 			fs.save(request);
-//			fs.all_data(request);
+			fs.all_data(request);
 			request.setAttribute("pg", "board/board_list.jsp");
 			view ="index.jsp";
+		}else if(part.equals("view")) {
+			fashion_service fs=new fashion_service();
+			fs.select_view(request);
+			request.setAttribute("pg","board/board_view.jsp");
+			view="index.jsp";
 		}
 		
 		return view;

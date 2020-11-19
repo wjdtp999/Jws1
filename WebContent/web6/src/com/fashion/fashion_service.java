@@ -11,9 +11,16 @@ import com.exchange.exchange_page;
 import com.member.member;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import com.sug.suggest_dao;
 
 public class fashion_service {
 	
+	public void select_view(HttpServletRequest request) {
+		int num=Integer.parseInt(request.getParameter("num"));
+		exchange_dao ed=new exchange_dao();
+		exchange data=ed.view("fashion", num);
+		request.setAttribute("data", data);
+	}
 	public void all_data(HttpServletRequest request) {
 		int page_num=1;
 		String num=request.getParameter("pnum");

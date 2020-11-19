@@ -6,6 +6,13 @@
 <style>
 	table tr td{text-align:center;}
 </style>
+<script>
+function winopen(param){
+	var url="http://localhost:8080/web6/"+param;
+	window.open(url);
+}
+
+</script>
 <a href='${m }.chg?part=write'>등록하기</a>
 
 <table>
@@ -17,7 +24,7 @@
 				<c:forEach var="data" items="${list.getContent() }">
 					<tr>  
 						<td>${data.getNum() }</td>
-						<td>${data.getTitle() }</td>
+						<td><a href="javascript:winopen('${m }.chg?part=view&num=${data.getNum() }')">${data.getTitle() }</a></td>
 						<td>${data.getName() }</td>
 						<td>${data.getDATE() }</td>
 						<td>${data.getSug_count() }</td>

@@ -42,6 +42,24 @@ public class exchange_dao {
 		}
 		return 0;
 	}
+	public exchange view(String table, int num) {
+		String sql = "select * from "+table+" where num="+num;
+		try ( Statement stmt = conn.createStatement();
+				ResultSet rs = stmt.executeQuery(sql)){
+			if(rs.next()) {
+				exchange temp = new exchange(
+rs.getInt("num"),rs.getString("name"),rs.getString("title"),
+rs.getString("content"),rs.getString("img").split("-"),
+rs.getDate("dt"),get_sugnum(rs.getString("sug"))						
+				);
+				return temp;
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+			System.out.println(table+" 글보기 오류");
+		}
+		return null;
+	}
 	public ArrayList<exchange> all_select(String table,int startRow,int size){
 		String sql="select * from (select row_number()";
 		sql +=" over(order by num desc) n, A.* from "+table+" A order by num desc)";

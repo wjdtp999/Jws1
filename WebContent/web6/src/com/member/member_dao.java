@@ -69,7 +69,22 @@ public class member_dao {
 					System.out.println("member_insert오류");
 				} 
 	}
-
+	
+	public void sug_update(String name,int sug_num) {
+		String my_sug = get_sug(name);
+	}
+	private String get_sug(String name) {
+		 	String sql = "select sug_num from member where name='"+name+"'";
+		 	try(Statement st=conn.createStatement(); ResultSet rs=st.executeQuery(sql)){
+		 		if(rs.next())
+		 			return rs.getString(1);
+		 	}catch(SQLException e) {
+		 		e.printStackTrace();
+		 		System.out.println("sug_num 조회 오류 ");
+		 	}
+		 	return null;
+	}
+	
 	public member member_update(String id,String pword, String tel, String addr, String field) {
 		if(pword=="") {		
 			String sql="select pword from member where email='"+id+"'";
