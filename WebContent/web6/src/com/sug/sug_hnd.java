@@ -1,5 +1,6 @@
 package com.sug;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,8 +16,18 @@ public class sug_hnd implements ex_able{
 				String part=request.getParameter("part");
 				Map<String,sug_able> sug=null;
 				sug = get_Map();
-				sug.get(part).service(request);
-		return null;
+				String view=null;
+				view=sug.get(part).service(request);
+				if(view==null) {
+					String kind=(String)request.getAttribute("kind");
+					try {
+						response.sendRedirect(kind+".chg");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+		return view;
 	}
 
 	private Map<String, sug_able> get_Map() {

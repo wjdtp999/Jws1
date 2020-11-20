@@ -30,7 +30,7 @@ public class suggest_dao {
 			ptmt.setString(5, kind);
 			ptmt.setInt(6,num);
 			ptmt.executeUpdate();
-			new com.member.member_dao.sug_update(who, n);
+			new com.member.member_dao().sug_update(who, n);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println(kind+"제안 글등록 오류");

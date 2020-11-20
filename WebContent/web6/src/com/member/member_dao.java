@@ -72,6 +72,18 @@ public class member_dao {
 	
 	public void sug_update(String name,int sug_num) {
 		String my_sug = get_sug(name);
+		if(my_sug.equals("0"))
+			my_sug=Integer.toString(sug_num);
+		else
+			my_sug += ("-"+sug_num);
+			
+			String sql="update member set sug ='"+my_sug+"' where name='"+name+"'";
+			try(Statement st=conn.createStatement()){
+				
+			}catch(SQLException e) {
+				e.printStackTrace();
+				System.out.println("sug_update 오류");
+			}
 	}
 	private String get_sug(String name) {
 		 	String sql = "select sug_num from member where name='"+name+"'";

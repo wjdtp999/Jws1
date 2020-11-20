@@ -42,7 +42,7 @@
 		<div id='sug'>
 		<p>================================================</p>
 		<form method="post" action="sug.chg">
-			<input type="hidden" name="writer" value="$user.getName()">
+			<input type="hidden" name="writer" value="${user.getName()}">
 			<input type="hidden" name='part' value='sug'>
 			<input type='hidden' name='num' value='${data.getNum() }'>
 			<input type="hidden" name='kind' value='${m }'>

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+#select_list{border:1px solid gray; display:inline-block;
+position:fixed; top:100px;margin:0;left:0;}
+#select_list ul{
+	list-style-type:none;
+	width:160px;
+	height:175px;	
+	margin:0;
+	padding:0;
+}
+#select_list ul li{
+	height:35px;
+	font-size:20pt;
+	font-weight:600;
+}
+#select_list ul li a{
+	color:black;
+	font-weight:700;
+	text-decoration:none;
+}
+#select_list ul li:hover a{	color:white;}
+
+#select_list ul li:hover{	background:gray;}
+
+#my_list{left:200px; position:relative;}

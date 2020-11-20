@@ -8,7 +8,7 @@
 </c:if>
 <c:if test="${user!=null }">  
 <span>${user.getName() } </span>
-<span><a href='mybag.do?part=bag'>내가방</a></span>  
+<span><a href='mybag.do'>내가방</a></span>  
 <span><a href='info.do?part=info'>회원정보</a></span> 
 <span><a href='logout.do'>로그아웃</a></span>  
 </c:if>
